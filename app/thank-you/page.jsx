@@ -24,7 +24,7 @@ export default function ThankYou() {
           </a>
         )}
         <div>
-          <Link href="/" className="inline-block bg-[#2085b5] hover:bg-slate-900 text-white px-8 py-3 rounded-full font-bold transition-all">
+          <Link href="/" className="inline-block bg-[#2085b5] hover:bg-slate-900 text-white px-8 py-3 rounded-full font-bold transition-all mb-1.5">
             Back to Home
           </Link>
         </div>
