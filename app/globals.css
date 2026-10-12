@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Define your custom fonts for v4 */
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-courgette: "Courgette", cursive;
+  --font-satoshi: var(--font-satoshi), sans-serif;
+
+  /* Define the brand colors found in your screenshots */
+  --color-brand-blue: rgb(59, 130, 246);
+  --color-brand-dark: rgb(17, 15, 15);
+  --color-brand-gray: rgb(82, 82, 82);
+}
+
+@layer base {
+  body {
+    @apply font-roboto text-brand-dark antialiased;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Hide Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
