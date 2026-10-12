@@ -4,7 +4,7 @@ import Script from "next/script";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import localFont from "next/font/local";
-
+import ContactPopup from "./components/ContactPopup";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -65,7 +65,9 @@ export default function RootLayout({ children }) {
         </noscript>
         <Navbar/>
         {children}
+        <ContactPopup/>
         <Footer/>
+
       </body>
     </html>
   );

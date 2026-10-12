@@ -18,11 +18,11 @@ popularSearch: [
   "Dolphin Sightseeing Goa"
 ],
   resources: [
-    { label: "About Us", href: "/About" },
-    { label: "Privacy Policy", href: "/Privacy" },
-    { label: "Contact Us", href: "/Contact" },
-    { label: "Terms & Conditions", href: "/Terms" },
-    { label: "Refund Policy", href: "/Refund" }
+    { label: "About Us", href: "/about" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Contact Us", href: "/contact" },
+    { label: "Terms & Conditions", href: "/terms" },
+    { label: "Refund Policy", href: "/refund" }
   ]
 };
  
@@ -118,13 +118,17 @@ Port Blair, Andaman Island, 744105
           </div>
 
           {/* Navigation Columns */}
-          <div>
-            <h4 className="font-poppins font-bold text-xl mb-8">Top Package</h4>
-            <ul className="space-y-4 text-gray-400">
-              {footerLinks.topDestinations.map(link => <li key={link} className="hover:text-blue-500 cursor-pointer"><a href={link}>{link}</a></li>)}
-            </ul>
-          </div>
-
+         
+<div>
+  <h4 className="font-poppins font-bold text-xl mb-8">Top Package</h4>
+  <ul className="space-y-4 text-gray-400">
+    {footerLinks.topDestinations.map(link => (
+      <li key={link} className="hover:text-blue-500 cursor-pointer">
+        <a href={`/${link.toLowerCase()}`}>{link}</a>
+      </li>
+    ))}
+  </ul>
+</div>
           <div>
             <h4 className="font-poppins font-bold text-xl mb-8">Popular Search</h4>
             <ul className="space-y-4 text-gray-400">

@@ -9,10 +9,10 @@ export default function Navbar() {
   const [adventureOpen, setAdventureOpen] = useState(false);
 
   const adventures = [
-    { name: "Grand Island", href: "/Grand-Island" },
-    { name: "Dudhsagar Waterfall", href: "/Dudhsagar" },
-    { name: "Dinner Cruise Party", href: "/Dinner-Cruise-Party" },
-    { name: "Adventure Water Sports", href: "/Adventure-Water-Sports" },
+    { name: "Grand Island", href: "/grand-island" },
+    { name: "Dudhsagar Waterfall", href: "/dudhsagar" },
+    { name: "Dinner Cruise Party", href: "/dinner-cruise-party" },
+    { name: "Adventure Water Sports", href: "/adventure-water-sports" },
   ];
 
   return (
@@ -72,20 +72,20 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="/About" className="font-medium text-gray-700 hover:text-[#2085b5]">
+            <Link href="/about" className="font-medium text-gray-700 hover:text-[#2085b5]">
               About
             </Link>
 
-            <Link href="/Contact" className="font-medium text-gray-700 hover:text-[#2085b5]">
+            <Link href="/contact" className="font-medium text-gray-700 hover:text-[#2085b5]">
               Contact
             </Link>
-            <Link href="/Privacy" className="font-medium text-gray-700 hover:text-[#2085b5]">
+            <Link href="/privacy" className="font-medium text-gray-700 hover:text-[#2085b5]">
               Privacy Policy
             </Link>
-            <Link href="/Refund" className="font-medium text-gray-700 hover:text-[#2085b5]">
+            <Link href="/refund" className="font-medium text-gray-700 hover:text-[#2085b5]">
               Refund Policy
             </Link>
-            <Link href="/Terms" className="font-medium text-gray-700 hover:text-[#2085b5]">
+            <Link href="/terms" className="font-medium text-gray-700 hover:text-[#2085b5]">
               Terms & Conditions
             </Link>
 
