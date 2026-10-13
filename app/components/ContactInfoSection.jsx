@@ -16,6 +16,7 @@ const contactItems = [
     ),
     action: "LOCATION",
     icon: <MapPin className="h-10 w-10 text-yellow-600" />,
+    url:"",
   },
   {
     title: "PHONE",
@@ -23,6 +24,7 @@ const contactItems = [
     content: <>Call Us On: 7678464517</>,
     action: "CALL US",
     icon: <PhoneCall className="h-10 w-10 text-yellow-600" />,
+    url:"tel:+917678464517",
   },
   {
     title: "WHATSAPP",
@@ -30,6 +32,7 @@ const contactItems = [
     content: <>Live Chat with our Tour Planner</>,
     action: "LIVE CHAT",
     icon: <MessageCircle className="h-10 w-10 text-yellow-600" />,
+    url:"https://wa.me/917678464517",
   },
   {
     title: "CUSTOMER SUPPORT",
@@ -43,6 +46,7 @@ const contactItems = [
     ),
     action: "TRIP MANAGER",
     icon: <Clock className="h-10 w-10 text-yellow-600" />,
+    url:"tel:+917678464517",
   },
 ];
 
@@ -59,13 +63,17 @@ export default function ContactInfoSection() {
             transition={{ delay: index * 0.15, duration: 0.5 }}
             viewport={{ once: true }}
           >
+             <a className="mt-6 text-black font-semibold tracking-wide text-sm uppercase cursor-pointer" href={item.url}>
             <div className="flex justify-center mb-4 text-black">{item.icon}</div>
             <h3 className="text-sm text-gray-500 tracking-wide">{item.subtitle}</h3>
             <h2 className="text-lg font-semibold text-gray-800 mt-1">{item.title}</h2>
             <p className="text-sm text-gray-600 mt-4 leading-relaxed">{item.content}</p>
-            <a className="mt-6 text-black font-semibold tracking-wide text-sm uppercase cursor-pointer">
-              {item.action}
+           
+             
             </a>
+            {/* <a className="mt-6 text-black font-semibold tracking-wide text-sm uppercase cursor-pointer">
+              {item.action}
+            </a> */}
           </motion.div>
         ))}
       </div>
