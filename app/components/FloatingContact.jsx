@@ -19,7 +19,7 @@ export default function FloatingContact({ isHome = false }) {
 
       {/* WhatsApp Button (Right) */}
       <a
-        href="https://wa.me/917678464517?text=Hello, I came across goasportsadventure.in and would like to know more about your packages."
+        href="https://wa.me/917678464517?text=Hello,Hi, I’m interested in your package in Goa. Could you please share more details?"
         target="_blank"
         rel="noopener noreferrer"
         className={`fixed ${bottomClass} right-1 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-green-500 text-white shadow-lg hover:scale-110 transition-transform duration-200`}
