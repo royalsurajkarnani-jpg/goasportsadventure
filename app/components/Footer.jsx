@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaFacebookF, FaXTwitter, FaYoutube, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa"; 
 import { IoMailOutline } from "react-icons/io5";
+import Link from 'next/link';
 
 const footerLinks = {
   topDestinations: ["Grand-Island", "Dudhsagar", "Dinner-Cruise-Party", "Adventure-Water-Sports"],
@@ -46,10 +47,14 @@ export default function Footer() {
         <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-500 text-2xl">
           <FaWhatsapp />
         </div>
-        <div>
-          <p className="text-gray-400 text-xs uppercase font-bold">WhatsApp</p>
-          <p className="text-white font-bold">+91 76784 64517</p>
-        </div>
+       <div>
+  <p className="text-gray-400 text-xs uppercase font-bold">
+    WhatsApp
+  </p>
+  <Link href="https://wa.me/917678464517" target="_blank">
+    <p className="text-white font-bold">+91 76784 64517</p>
+  </Link>
+</div>
       </div>
 <div className="flex items-center gap-3">
         <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 text-2xl">
@@ -57,7 +62,10 @@ export default function Footer() {
         </div>
         <div>
           <p className="text-gray-400 text-xs uppercase font-bold">Mail Us</p>
+          <Link href={"mailto:info@goasportsadventure.in"}>
           <p className="text-white font-bold">info@goasportsadventure.in</p>
+          </Link>
+          
         </div>
       </div>
 
@@ -67,7 +75,9 @@ export default function Footer() {
         </div>
         <div>
           <p className="text-gray-400 text-xs uppercase font-bold">Call Us</p>
+          <Link href={"tel:917678464517"}>
           <p className="text-white font-bold">+91 76784 64517</p>
+          </Link>
         </div>
       </div>
         </div>

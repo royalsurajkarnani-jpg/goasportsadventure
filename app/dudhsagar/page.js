@@ -16,6 +16,7 @@ import HorizontalScrollTarget from '../components/Masterclass';
 import TourPackage from '../components/PackageCard';
 import Testimonials from '../components/Testemonial';
 import FloatingContact from '../components/FloatingContact';
+import ContactForm from '../components/Form';
 
 
 const adventureCards = [
@@ -275,7 +276,7 @@ const page = () => {
   const customText = `Hello, it’s great to know about goasportsadventure.in. Could you please guide me through the next steps to book the Dudhsagar Waterfall Tour Package?`;
    const WHATSAPP_NUMBER = "917678464517";
           const encodedText = encodeURIComponent(customText);
-          const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+          const whatsappUrl = `#form`;
 
   return (
     <div className=''>
@@ -329,6 +330,15 @@ const page = () => {
     description="Everything you need to know before booking your Goa adventure."
     faqs={Faqs}
   />
+<section id="form">
+  <ContactForm />
+
+
+  </section>
+
+
+
+
   <FloatingContact/>
 <Sticky
   title="Dudhsagar Waterfall Jungle Safari"
