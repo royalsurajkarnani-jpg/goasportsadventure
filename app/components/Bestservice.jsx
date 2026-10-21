@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react"; // Using lucide-react for the icons
+import Link from "next/link";
 
 export default function ServiceSection({
   title,
@@ -86,6 +87,21 @@ export default function ServiceSection({
           </a>
         </motion.div>
       </div>
+<button
+  type="button"
+  onClick={() => {
+    document.getElementById("form")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }}
+  className="mt-8 text-center font-roboto bg-[#2085b5] cursor-pointer text-white px-8 py-4 rounded-full font-medium shadow-lg shadow-blue-200 transition-all flex items-center gap-2 mx-auto"
+>
+  Enquire Now
+</button>
     </section>
   );
 }
+
+
+

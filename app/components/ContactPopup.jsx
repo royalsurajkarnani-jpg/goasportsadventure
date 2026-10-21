@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
 // 👉 In pages par popup kabhi nahi dikhega (apne actual route ke hisab se badal lena)
-const HIDDEN_ON = ['/thank-you', '/privacy', '/refund', '/terms','/contact'];
+const HIDDEN_ON = ['/thank-you', '/privacy', '/refund', '/terms','/contact','/thanks-dudhsagar','/thanks-grand-island'];
 
 const WHATSAPP_NUMBER = '+917678464517'; // 👉 client ka number (country code ke saath, bina + ke)
 const ACCESS_KEY = 'd350d79e-c6b0-4be6-88eb-33aede4e8576'; // 👉 baad mein yahan form access key lagana
