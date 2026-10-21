@@ -16,7 +16,7 @@ import HorizontalScrollTarget from '../components/Masterclass';
 import TourPackage from '../components/PackageCard';
 import Testimonials from '../components/Testemonial';
 import FloatingContact from '../components/FloatingContact';
-import ContactForm from '../components/Form';
+import DudhsagarBookingForm from '../components/DudhsagarBookingForm';
 
 
 const adventureCards = [
@@ -331,7 +331,7 @@ const page = () => {
     faqs={Faqs}
   />
 <section id="form">
-  <ContactForm />
+  <DudhsagarBookingForm/>
 
 
   </section>
