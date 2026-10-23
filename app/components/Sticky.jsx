@@ -48,12 +48,12 @@ const Sticky = ({
           {/* CTA */}
           <div className="flex items-center gap-4">
             <a
-              href={whatsappLink}
+              href="#form"
               target="_blank"
               rel="noopener noreferrer"
               className={`bg-[#2085b5] hover:bg-${accentColor}-500 text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-black text-xs md:text-sm uppercase tracking-widest transition-all active:scale-95 shadow-lg border-2 border-${accentColor}-700`}
             >
-              Book Now
+              Enquire Now
             </a>
           </div>
         </div>

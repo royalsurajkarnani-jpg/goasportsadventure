@@ -1,9 +1,14 @@
+
+
+
+
 "use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const ACCESS_KEY = "d350d79e-c6b0-4be6-88eb-33aede4e8576";
+const WHATSAPP_NUMBER = "+917678464517"; // 👈 apna number daalo, country code ke saath, bina + ke
 
 export default function GrandIslandBookingForm() {
   const router = useRouter();
@@ -18,6 +23,9 @@ export default function GrandIslandBookingForm() {
     setLoading(true);
 
     const fd = new FormData(e.currentTarget);
+
+    // WhatsApp tab pehle hi khol do (click ke turant baad) taaki popup-blocker na roke
+    const waWindow = window.open("", "_blank");
 
     const payload = {
       access_key: ACCESS_KEY,
@@ -41,16 +49,36 @@ export default function GrandIslandBookingForm() {
       const data = await res.json();
 
       if (data.success) {
+        // WhatsApp message with details
+        const text =
+          `*New Grand Island Trip Enquiry*\n\n` +
+          `*Name:* ${payload.name}\n` +
+          `*WhatsApp:* ${payload.whatsapp}\n` +
+          `*Travel Date:* ${payload.travel_date}\n` +
+          `*People:* ${payload.people}`;
+        const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
+        if (waWindow) waWindow.location.href = waUrl;
+        else sessionStorage.setItem("waUrl", waUrl); // fallback: thank-you page par button dikhega
+
         router.push("/thanks-grand-island");
       } else {
+        if (waWindow) waWindow.close();
         setError(data.message || "Something went wrong. Please try again.");
         setLoading(false);
       }
     } catch (err) {
+      if (waWindow) waWindow.close();
       setError("Network error. Please try again.");
       setLoading(false);
     }
   };
+
+  // ... return (...) bilkul same rahega, koi change nahi
+
+
+
+
 
   return (
     <>
