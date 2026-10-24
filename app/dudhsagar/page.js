@@ -269,6 +269,36 @@ const Faqs = [
     answer:
       "Yes. Guests are served an unlimited veg & non-veg buffet lunch at the spice plantation.",
   },
+
+   {
+    id: 6,
+    question: "How much is the Dudhsagar tour package from Goa?",
+    answer:
+      "Our Dudhsagar full-day package costs ₹2,700 per person. It includes AC Volvo bus, jeep safari, forest permits, Dudhsagar waterfall visit, spice plantation tour and unlimited buffet lunch.",
+  },
+   {
+    id: 7,
+    question: "Is the Dudhsagar jeep safari included in the package?",
+    answer:
+      "Yes. The jungle jeep safari and forest entry permits are included. We pre-book your slot so you do not wait in a long queue.",
+  },
+
+{
+    id: 8,
+    question: "Can I book the Dudhsagar trip on the same day?",
+    answer:
+      "Yes, same-day booking is available. Please reach by 6–7 AM.",
+  },
+
+  {
+    id: 9,
+    question: "Is lunch included in the Dudhsagar trip?",
+    answer:
+      "Yes. Unlimited veg and non-veg buffet lunch is served at the spice plantation.",
+  },
+
+
+
 ];
 
 const page = () => {
@@ -294,6 +324,40 @@ const page = () => {
         cardWidth={320}     // dynamic width
       />
          <TourPackage data={dudhsagarWaterfallPackage} />
+
+<section style={{ maxWidth: "1000px", margin: "0 auto", padding: "80px 20px" }}>
+  <h3
+    style={{
+      textAlign: "center",
+      fontSize: "28px",
+      fontWeight: 700,
+      marginBottom: "16px",
+    }}
+  >
+    Dudhsagar Jeep Safari Booking from Goa
+  </h3>
+
+  <p
+    style={{
+      textAlign: "center",
+      fontSize: "17px",
+      lineHeight: 1.7,
+      color: "#444",
+      maxWidth: "800px",
+      margin: "0 auto 28px",
+    }}
+  >
+   Book your Dudhsagar jeep safari with us and skip the long queues. We pre-book your safari slot and arrange the forest permit. You ride through the jungle in an open jeep and reach the base of the waterfall. Your Dudhsagar tour package includes the AC Volvo bus, jeep safari, waterfall visit, spice plantation tour, old Goa churches visit & return, and buffet lunch.
+  </p>
+
+ 
+</section>
+
+
+
+
+
+
 <CommunicationMasterclass features={features} para="Do You Want to Avoid These" head="Common Dudhsagar Mistakes?"/>
       {/* <AutoScrollVideos
       videos={[
@@ -325,6 +389,94 @@ const page = () => {
         src="/dudhsagar.jpg"
       />
     <HorizontalScrollTarget targets={targets} header="Who Should Book This Dudhsagar Adventure?"/>
+
+
+
+
+
+
+
+
+<section style={{ maxWidth: "1000px", margin: "0 auto", padding: "40px 20px" }}>
+  <h3
+    style={{
+      textAlign: "center",
+      fontSize: "28px",
+      fontWeight: 700,
+      marginBottom: "28px",
+    }}
+  >
+    How to Book Your Dudhsagar Waterfall Trip
+  </h3>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+      gap: "20px",
+      marginBottom: "28px",
+    }}
+  >
+    {[
+      "Send us a message on WhatsApp with your travel date and number of people.",
+      "We confirm your jeep safari slot and share the meeting point.",
+      "Be ready by 6–7 AM on the trip day. We take care of the rest so you can enjoy the full-day Dudhsagar tour.",
+    ].map((step, index) => (
+      <div
+        key={index}
+        style={{
+          background: "#f7f9fc",
+          borderRadius: "12px",
+          padding: "24px 20px",
+          boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
+          textAlign: "center",
+        }}
+      >
+        <div
+          style={{
+            width: "44px",
+            height: "44px",
+            borderRadius: "50%",
+            background: "#2085b5",
+            color: "#fff",
+            fontWeight: 700,
+            fontSize: "18px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "0 auto 14px",
+          }}
+        >
+          {index + 1}
+        </div>
+        <p style={{ margin: 0, fontSize: "16px", lineHeight: 1.6, color: "#333" }}>
+          {step}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  <div
+    style={{
+      background: "#e8f2ff",
+      borderLeft: "4px solid #2085b5",
+      borderRadius: "8px",
+      padding: "16px 20px",
+      textAlign: "center",
+      fontSize: "16px",
+      color: "#222",
+    }}
+  >
+    <strong>Same-day booking is available.</strong> No payment is needed to enquire.
+  </div>
+</section>
+
+
+
+
+
+
+
     <FAQSection
     title="General Questions"
     description="Everything you need to know before booking your Goa adventure."
